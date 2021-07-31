@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Sentimental Analysis of Reviews</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/form_upload.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/form_upload.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <form class="form-upload" method="POST">
+      <h1 class="h3 mb-3 font-weight-normal">Please Write Your Review</h1>
+      <br>
+      <label class="sr-only" for="input_text">Your Review</label>
+      <br>
+      <br>
+      <input type="text" id="input_text" name="input_text" class="form-control" placeholder="Write here" required autofocus>
+      <br>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Predict Sentiment</button>
+      <br>
+      {% if prediction %}
+        <font><h3 class="h3 mb-3 font-weight-normal">Prediction: {{prediction}}</h3></font>
+      {% endif %}
+      <br>
+    </form>
+  </body>
+</html>
